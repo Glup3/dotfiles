@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+
+# Environment Variables
+SCRIPTS_PATH="$HOME/.config/yabai/scripts"
+
+# Custom Desktop Names
+yabai -m space 1 --label desktop1
+yabai -m space 2 --label desktop2
+yabai -m space 3 --label desktop3
+yabai -m space 4 --label desktop4
+yabai -m space 5 --label desktop5
+yabai -m space 6 --label desktop6
+yabai -m space 7 --label desktop7
+yabai -m space 8 --label desktop8
+yabai -m space 9 --label desktop9
+
+# Floating Windows
+yabai -m rule --add app="^System Preferences$" manage=off
+yabai -m rule --add app="^Finder$" manage=off
+yabai -m rule --add app="^Disk Utility$" manage=off
+yabai -m rule --add app="^System Information$" manage=off
+yabai -m rule --add app="^Activity Monitor$" manage=off
+yabai -m rule --add app="^TeamViewer$" manage=off
+yabai -m rule --add app="^iTerm2$" manage=off
+yabai -m rule --add app="^DeSmuME$" manage=off
+yabai -m rule --add app="^Flux$" manage=off
+yabai -m rule --add app="^Discord$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^Karabiner-EventViewer$" manage=off
+yabai -m rule --add app="^IntelliJ IDEA$" manage=off
+yabai -m rule --add app="^SceneBuilder$" manage=off
+yabai -m rule --add app="^java$" manage=off
+
+# Sticky Windows
+# empty at the moment
+
+# Window Settings
+yabai -m config window_placement second_child
+yabai -m config window_topmost off
+yabai -m config window_shadow float
+yabai -m config window_opacity off
+yabai -m config window_opacity_duration 0.00
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 1.0 
+
+# Limelight
+yabai -m config window_border on
+yabai -m config window_border_width 5
+yabai -m config active_window_border_color 0xFF40FF00
+yabai -m config normal_window_border_color 0x00FFFFFF
+
+# Split Ratios
+yabai -m config auto_balance off
+yabai -m config split_ratio 0.50
+
+# Mouse Settings
+# yabai -m config mouse_modifier alt 
+yabai -m config mouse_action2 resize
+yabai -m config mouse_action1 move
+yabai -m config focus_follows_mouse autoraise
+
+# Spacing
+yabai -m config layout bsp
+yabai -m config top_padding 15
+yabai -m config bottom_padding 15
+yabai -m config left_padding 15
+yabai -m config right_padding 15
+yabai -m config window_gap 15
+yabai -m config external_bar all:20:0
+
+# Signals
+yabai -m signal --add event=application_front_switched action="${SCRIPTS_PATH}/random_color.sh"
+# yabai -m signal --add event=application_front_switched action="${SCRIPTS_PATH}/single_window_no_border.sh"
