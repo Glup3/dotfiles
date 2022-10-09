@@ -12,3 +12,4 @@
 - yabai
 - karabiner
 - kitty
+- zsh
