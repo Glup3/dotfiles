@@ -9,3 +9,6 @@
 ## Applications
 
 - skhd
+- yabai
+- karabiner
+- kitty
