@@ -1,0 +1,86 @@
+# SKHD STUFF
+
+# if you're having troubles finding key codes for a key just type skhd --observe in a terminal and type a key. Pretty cool! Or just check the wiki. 
+
+# ======================== Keycodes ================================ #
+
+#k HYPER = SHIFT + CMD + ALT + CTRL
+#k 0x21 = "["
+#k 0x1E ="]"
+#k 0x2B = ","
+#k 0x2F = "."
+
+
+# ======================== Window Settings ========================= #
+
+## Toggle window fullscreen zoom / float / topmost
+hyper - f : yabai -m window --toggle zoom-fullscreen | yabai -m window --grid 1:1:0:0:1:1
+hyper - d : yabai -m window --toggle float
+hyper - t : yabai -m window --toggle topmost
+
+## Swap window
+hyper - 0x21 : yabai -m window --swap east || yabai -m window --swap west
+hyper - 0x1E : yabai -m window --swap north || yabai -m window --swap south
+
+## Move current Window to next/prev Monitor
+hyper - o : ~/.config/skhd/scripts/moveWindowLeftAndFollowFocus.sh
+hyper - p : ~/.config/skhd/scripts/moveWindowRightAndFollowFocus.sh
+
+## Move current Window to next/prev Space
+hyper - u : ~/.config/skhd/scripts/moveWindowPrevSpace.sh
+hyper - i : ~/.config/skhd/scripts/moveWindowNextSpace.sh
+
+## Center Window
+hyper - c : yabai -m window --grid 7:7:1:1:5:5
+
+
+# ======================== Space Settings ========================== #
+
+## rotate tree 90
+hyper - r : yabai -m space --rotate 90
+
+## activate stack layout
+hyper - s : yabai -m space --layout stack
+
+## activate bsp layout
+hyper - a : yabai -m space --layout bsp
+
+## activate float layout
+hyper - v : yabai -m space --layout float
+
+## create new space for current display
+hyper - n : yabai -m space --create
+
+## destroy current space
+hyper - m : yabai -m space --destroy
+
+## focus space
+hyper - 1 : yabai -m space --focus 1
+hyper - 2 : yabai -m space --focus 2
+hyper - 3 : yabai -m space --focus 3
+hyper - 4 : yabai -m space --focus 4
+hyper - 5 : yabai -m space --focus 5
+hyper - 6 : yabai -m space --focus 6
+hyper - 7 : yabai -m space --focus 7
+hyper - 8 : yabai -m space --focus 8
+hyper - 9 : yabai -m space --focus 9
+hyper - 0 : yabai -m space --focus 10
+
+
+## toggle opacity
+hyper - q : yabai -m config window_opacity on
+hyper - w : yabai -m config window_opacity off
+
+## toggle focus follows mouse
+hyper - z : yabai -m config focus_follows_mouse autofocus
+hyper - x : yabai -m config focus_follows_mouse off
+
+# ======================== Other Settings ========================== #
+
+## Quickly restart the yabai launch agent
+ctrl + alt + cmd - r : launchctl kickstart -k gui/$UID/homebrew.mxcl.yabai
+# ctrl + alt + cmd - r : launchctl kickstart -k "gui/$(id -u)/homebrew.mxcl.yabai"
+
+## Toggle mirror screen
+# hyper - t : /Users/phuctran/.config/skhd/scripts/mirror -t
+
