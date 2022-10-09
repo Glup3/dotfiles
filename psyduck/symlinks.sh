@@ -7,3 +7,4 @@ ln -sfn $BASEPATH/.config/yabai ~/.config/yabai
 ln -sfn $BASEPATH/.config/karabiner ~/.config/karabiner
 ln -sfn $BASEPATH/.config/kitty ~/.config/kitty
 # ln -sfn $BASEPATH/.zshrc ~/.zshrc
+ln -sfn $BASEPATH/simple-bar-lite ~/Library/Application\ Support/Übersicht/widgets/simple-bar-lite
