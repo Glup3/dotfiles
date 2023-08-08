@@ -58,7 +58,7 @@ yabai -m space 10 --label desktop10
 
 
 # Single Monitor Window Rules
-yabai -m rule --add app="^System Preferences$"    manage=off
+yabai -m rule --add app="^System Settings$"       manage=off
 yabai -m rule --add app="^Finder$"                manage=off
 yabai -m rule --add app="^Disk Utility$"          manage=off
 yabai -m rule --add app="^System Information$"    manage=off
@@ -86,6 +86,8 @@ yabai -m rule --add app="^Calendar$"      space=5
 
 yabai -m rule --add app="^Spotify$"       space=6
 yabai -m rule --add app="^Brave Browser$" space=6
+yabai -m rule --add app="^PyCharm$" 	    space=6 manage=off
+yabai -m rule --add app="^Anki"           space=6 manage=off
 
 
 yabai -m rule --add app="^KeePassXC$" display=1 manage=off grid=7:7:1:1:5:5
@@ -119,12 +121,12 @@ yabai -m config focus_follows_mouse off
 
 # Spacing
 yabai -m config layout bsp
-yabai -m config top_padding 15
-yabai -m config bottom_padding 15
-yabai -m config left_padding 15
-yabai -m config right_padding 15
-yabai -m config window_gap 15
-yabai -m config external_bar all:26:0
+yabai -m config top_padding 10
+yabai -m config bottom_padding 10
+yabai -m config left_padding 10
+yabai -m config right_padding 10
+yabai -m config window_gap 10
+yabai -m config external_bar all:24:0
 
 # Signals
 # yabai -m signal --add event=application_front_switched action="${SCRIPTS_PATH}/random_color.sh"

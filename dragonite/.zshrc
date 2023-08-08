@@ -26,5 +26,3 @@ export PATH="$HOME/.local/bin:$PATH"
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
-
-export MAVEN_OPTS=-Xmx8192m
