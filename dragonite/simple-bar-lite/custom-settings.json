@@ -28,7 +28,7 @@
     "barRadius": "0px",
     "barOpacity": "0.8",
     "spaceMargin": "0px 12px 0px 0px",
-    "processWidth": "320px",
+    "processWidth": "100%",
     "itemRadius": "18px",
     "itemMargin": "0px 0px 0px 4px",
     "itemInnerMargin": "3px 7px",

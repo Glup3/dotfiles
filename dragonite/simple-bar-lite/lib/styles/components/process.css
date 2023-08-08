@@ -11,6 +11,7 @@
   transition: color 160ms var(--spl-transition-easing), box-shadow 160ms var(--spl-transition-easing);
   animation: spl-process-appearance 160ms var(--spl-transition-easing);
   z-index: 0;
+  margin-left: auto;
 }
 
 @keyframes spl-process-appearance {

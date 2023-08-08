@@ -78,8 +78,9 @@ hyper - x : yabai -m config focus_follows_mouse off
 # ======================== Other Settings ========================== #
 
 ## Quickly restart the yabai launch agent
-ctrl + alt + cmd - r : launchctl kickstart -k gui/$UID/homebrew.mxcl.yabai
+# ctrl + alt + cmd - r : launchctl kickstart -k gui/$UID/homebrew.mxcl.yabai
 # ctrl + alt + cmd - r : launchctl kickstart -k "gui/$(id -u)/homebrew.mxcl.yabai"
+ctrl + alt + cmd - r: yabai --restart-service
 
 ## Toggle mirror screen
 # hyper - t : /Users/phuctran/.config/skhd/scripts/mirror -t
