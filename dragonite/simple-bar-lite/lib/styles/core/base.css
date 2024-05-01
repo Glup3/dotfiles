@@ -1,7 +1,7 @@
 .spl-bar {
   position: absolute;
-  /* top: var(--spl-bar-vertical-offset); */
-  bottom: var(--spl-bar-vertical-offset);
+  top: var(--spl-bar-vertical-offset);
+  /* bottom: var(--spl-bar-vertical-offset); */
   left: var(--spl-bar-horizontal-offset);
   width: calc(var(--spl-bar-width) - (var(--spl-bar-horizontal-offset) * 2));
   height: var(--spl-bar-height);

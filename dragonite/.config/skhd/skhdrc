@@ -16,7 +16,6 @@
 ## Toggle window fullscreen zoom / float / topmost
 hyper - f : yabai -m window --toggle zoom-fullscreen | yabai -m window --grid 1:1:0:0:1:1
 hyper - d : yabai -m window --toggle float
-hyper - t : yabai -m window --toggle topmost
 
 ## Swap window
 hyper - 0x21 : yabai -m window --swap east || yabai -m window --swap west
@@ -49,10 +48,10 @@ hyper - a : yabai -m space --layout bsp
 hyper - v : yabai -m space --layout float
 
 ## create new space for current display
-hyper - n : yabai -m space --create
+# hyper - n : yabai -m space --create
 
 ## destroy current space
-hyper - m : yabai -m space --destroy
+# hyper - m : yabai -m space --destroy
 
 ## focus space
 hyper - 1 : yabai -m space --focus 1
@@ -68,18 +67,16 @@ hyper - 0 : yabai -m space --focus 10
 
 
 ## toggle opacity
-hyper - q : yabai -m config window_opacity on
-hyper - w : yabai -m config window_opacity off
+# hyper - q : yabai -m config window_opacity on
+# hyper - w : yabai -m config window_opacity off
 
 ## toggle focus follows mouse
-hyper - z : yabai -m config focus_follows_mouse autofocus
-hyper - x : yabai -m config focus_follows_mouse off
+# hyper - z : yabai -m config focus_follows_mouse autofocus
+# hyper - x : yabai -m config focus_follows_mouse off
 
 # ======================== Other Settings ========================== #
 
 ## Quickly restart the yabai launch agent
-# ctrl + alt + cmd - r : launchctl kickstart -k gui/$UID/homebrew.mxcl.yabai
-# ctrl + alt + cmd - r : launchctl kickstart -k "gui/$(id -u)/homebrew.mxcl.yabai"
 ctrl + alt + cmd - r: yabai --restart-service
 
 ## Toggle mirror screen
